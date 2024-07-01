@@ -175,6 +175,7 @@ scipy==1.13.1
     #   ydata-profiling
 seaborn==0.13.2
     # via ydata-profiling
+setuptools==70.2.0
 six==1.16.0
     # via
     #   patsy
@@ -208,6 +209,7 @@ urllib3==2.2.2
     # via requests
 visions==0.7.6
     # via ydata-profiling
+watchdog==4.0.1
 wordcloud==1.9.3
     # via ydata-profiling
 xlrd==2.0.1
