@@ -60,6 +60,9 @@ currently perform is in the sidebar (left), with a full list of `pandas` dtypes 
 [here](https://pandas.pydata.org/pandas-docs/stable/user_guide/basics.html#dtypes)
 Uploading multiple files will remove the Report Preview section and just make the files available
 for download. 
+
+> NOTE: The more columns you have generally will result in much longer run times. Prefer "long" to "wide"
+format when possible.
 """)
 
 
