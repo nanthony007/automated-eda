@@ -146,11 +146,11 @@ if uploaded_files is not None:
                 explorative=explorative,
             )
             report_html = report.to_html()
-            center.download_button(
-                label="Download report",
-                file_name=f"{file.name.split('.')[0].title()}-report.html",
-                data=report_html,
-                mime="text/plain",
-                type="primary",
-                use_container_width=True,
-            )
+        center.download_button(
+            label="Download report",
+            file_name=f"{file.name.split('.')[0].title()}-report.html",
+            data=report_html,
+            mime="text/plain",
+            type="primary",
+            use_container_width=True,
+        )
