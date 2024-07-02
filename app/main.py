@@ -137,19 +137,20 @@ if uploaded_files is not None:
                     format="mixed",
                     errors="raise",
                 )
-        report = ProfileReport(
-            df,
-            title=f"{file.name.split('.')[0].title()} Report",
-            type_schema={k: parse_dtype(v) for k, v in new_schema.items()},
-            minimal=minimal,
-            explorative=explorative,
-        )
-        report_html = report.to_html()
-        center.download_button(
-            label="Download report",
-            file_name=f"{file.name.split('.')[0].title()}-report.html",
-            data=report_html,
-            mime="text/plain",
-            type="primary",
-            use_container_width=True,
-        )
+        with st.spinner("Creating report..."):
+            report = ProfileReport(
+                df,
+                title=f"{file.name.split('.')[0].title()} Report",
+                type_schema={k: parse_dtype(v) for k, v in new_schema.items()},
+                minimal=minimal,
+                explorative=explorative,
+            )
+            report_html = report.to_html()
+            center.download_button(
+                label="Download report",
+                file_name=f"{file.name.split('.')[0].title()}-report.html",
+                data=report_html,
+                mime="text/plain",
+                type="primary",
+                use_container_width=True,
+            )
